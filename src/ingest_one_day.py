@@ -47,7 +47,7 @@ else:
         "pitch_type",
         "pitch_name",
         "release_speed",
-        "release_spin_rate",
+        "release_spin",
         "spin_axis",
         "release_extension",
         "pfx_x",
@@ -86,7 +86,7 @@ else:
     # Create silver dataframe from available/selected columns, clean data types
 
     silver_pitches_df = statcast_df[available_columns].copy()
-    
+
     silver_pitches_df["game_date"] = pd.to_datetime(silver_pitches_df["game_date"], errors="coerce")
     silver_pitches_df["release_speed"] = pd.to_numeric(silver_pitches_df["release_speed"], errors="coerce")
     silver_pitches_df["launch_speed"] = pd.to_numeric(silver_pitches_df["launch_speed"], errors="coerce")
